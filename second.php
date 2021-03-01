@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,7 @@
 <body>
 	<h1>Registration Form</h1>
 	<?php 
-
-	
+	      
 
 		if($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -34,10 +34,15 @@
 			$f=fopen("save.txt","a");
 			fwrite($f,$FirstName. "" .$lastName. "" .$gender. "" .$email. "" .$username. "" .$pass. "" .$recoveryemial. "\n");
 			fclose($f);
-		      }
-		  }
 
-			
+			header('Location:login.php');
+			exit;
+		      }
+		  
+		      
+		  
+
+		}	
 
 			
 		
